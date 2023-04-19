@@ -9,9 +9,10 @@ contract WojakInu is Ownable, ERC20 {
     uint256 public maxHoldingAmount;
     uint256 public minHoldingAmount;
     address public uniswapV2Pair;
+    uint256 _totalSupply = 424_000_000_000_000 * 10 ** 18;
     mapping(address => bool) public blacklists;
 
-    constructor(uint256 _totalSupply) ERC20("WojakInu", "WOJAKINU") {
+    constructor() ERC20("WojakInu", "WOJAKINU") {
         _mint(msg.sender, _totalSupply);
     }
 
